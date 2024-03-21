@@ -1,0 +1,29 @@
+DF in PySpark:
+--------------
+- RDB
+- DF = SparkContext + SQLContext = SparkSession
+- DF Operations:
+	- DF standalone operations -> transformation (select,where/filter,groupby,having)
+		(no optimisation)  -> action (show())
+	- Spark SQL
+	- UDF -> catalyst query optimisation (rule, cost based)
+	      -> project tungsten (memory management, cache awareness, code generation)
+
+RDD                          
+*any other type
+*complex things (using Python)
+*How
+
+DF
+*structuted data
+*simple things (using SQL)
+*What
+
+RDD in Spark:
+-------------
+RDD is collection of partitions
+Partitions recovers itself using DAG
+
+RDD operations:
+	- Transformation -> map() etc.
+	- Action -> printout/display

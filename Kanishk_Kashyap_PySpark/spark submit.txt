@@ -1,0 +1,19 @@
+Pyspark folder struture:
+
+-job -> write pyspark code (read data rom diff. file format and dump the data into the warehouse
+-shared -> store all the shared scripts.
+-configs -> configurations
+
+data dumps -> db2, postgres
+
+Spark properties:
+--num executors ->(3)
+--executor memory -> each task to perform requires memory (10gb)
+--executor cores(CPU) -> (3task)
+--driver memory -> collect data from all the executors.
+
+ex: read data from csv, write data into dataframe, load data into snowflake
+
+Spark Submit Command:
+spark-submit(path) --master(local/K8) --deploy-mode (client/cluster) --name --conf (image) --jars --jobs_name
+5 cores means 5 tasks can run parallely
